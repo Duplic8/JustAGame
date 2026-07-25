@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://bgbyh1x80bs4c"]
+
+[ext_resource type="Texture2D" uid="uid://bdmr24met4mv8" path="res://peak_background.png" id="1_p3fck"]
+[ext_resource type="Texture2D" uid="uid://dfv7wh5agf82k" path="res://robosaur highqual.png" id="2_4gxqj"]
+
+[sub_resource type="GDScript" id="GDScript_p3fck"]
+script/source = "extends Node2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+
+
+func _on_button_pressed() -> void:
+	get_tree().change_scene_to_file(\"res://level_scene.tscn\")
+
+func _on_start_pressed() -> void:
+	pass # Replace with function body.
+
+
+func _on_quit_pressed() -> void:
+	get_tree().quit()
+	pass # Replace with function body.
+"
+
+[node name="TitleScreen" type="Node2D" unique_id=610265776]
+script = SubResource("GDScript_p3fck")
+
+[node name="Background" type="TextureRect" parent="." unique_id=503871984]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_p3fck")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=134536926]
+offset_left = -21.0
+offset_top = 293.0
+offset_right = 337.0
+offset_bottom = 651.0
+texture = ExtResource("2_4gxqj")
+expand_mode = 1
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1213237186]
+offset_left = 192.0
+offset_top = 32.0
+offset_right = 960.0
+offset_bottom = 216.0
+theme_override_constants/outline_size = 40
+theme_override_font_sizes/normal_font_size = 134
+text = "Dino Game"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="." unique_id=2076950479]
+offset_left = 320.0
+offset_top = 256.0
+offset_right = 960.0
+offset_bottom = 352.0
+theme_override_font_sizes/font_size = 60
+text = "Start"
+
+[node name="Settings" type="Button" parent="." unique_id=719051084]
+offset_left = 320.0
+offset_top = 384.0
+offset_right = 960.0
+offset_bottom = 480.0
+theme_override_font_sizes/font_size = 60
+text = "Settings"
+
+[node name="Quit" type="Button" parent="." unique_id=1759674771]
+offset_left = 320.0
+offset_top = 512.0
+offset_right = 960.0
+offset_bottom = 608.0
+theme_override_font_sizes/font_size = 60
+text = "Quit"
+
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
