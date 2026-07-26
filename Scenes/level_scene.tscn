@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://dtfotbyoul8be"]
+
+[ext_resource type="Script" uid="uid://bl2uen0sbp3fj" path="res://Scenes/timer_scene.gd" id="1_c7xwe"]
+[ext_resource type="Texture2D" uid="uid://bdmr24met4mv8" path="res://peak_background.png" id="1_cn3xy"]
+[ext_resource type="Texture2D" uid="uid://bcw0g1oe213jl" path="res://heart.png" id="2_c7xwe"]
+
+[node name="TimerScreen" type="Node2D" unique_id=880672744]
+script = ExtResource("1_c7xwe")
+
+[node name="Background" type="TextureRect" parent="." unique_id=2030303875]
+offset_right = 1153.5442
+offset_bottom = 648.0
+texture = ExtResource("1_cn3xy")
+
+[node name="HeartContainer" type="HBoxContainer" parent="." unique_id=32469463]
+offset_left = 192.0
+offset_top = 120.0
+offset_right = 1758.0
+offset_bottom = 350.0
+scale = Vector2(0.4934221, 0.4934221)
+theme_override_constants/separation = -90
+alignment = 1
+
+[node name="Heart" type="TextureRect" parent="HeartContainer" unique_id=1464408630]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Heart2" type="TextureRect" parent="HeartContainer" unique_id=2045801762]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Heart3" type="TextureRect" parent="HeartContainer" unique_id=2009400329]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Heart4" type="TextureRect" parent="HeartContainer" unique_id=2061128991]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Heart5" type="TextureRect" parent="HeartContainer" unique_id=2145712311]
+layout_mode = 2
+texture = ExtResource("2_c7xwe")
+
+[node name="Level" type="RichTextLabel" parent="." unique_id=736698749]
+offset_left = 384.0
+offset_top = 240.0
+offset_right = 768.0
+offset_bottom = 328.0
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/normal_font_size = 50
+text = "Level #"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="RichTextLabel" parent="." unique_id=435131844]
+offset_left = 384.0
+offset_top = 328.0
+offset_right = 768.0
+offset_bottom = 416.0
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/normal_font_size = 50
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1

@@ -14,6 +14,10 @@ config/name="TuffGame"
 run/main_scene="uid://bgbyh1x80bs4c"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 
+[autoload]
+
+Global="*uid://dixs3bdqshkcw"
+
 [display]
 
 window/stretch/mode="viewport"
