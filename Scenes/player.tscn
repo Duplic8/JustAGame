@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b3pjfi2vapobd"]
+
+[ext_resource type="Script" uid="uid://bn6og0faco5h4" path="res://player.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://dfv7wh5agf82k" path="res://robosaur highqual.png" id="2_6t5aa"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cvnsp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7yddl"]
+radius = 75.0
+
+[node name="Player" type="CharacterBody2D" unique_id=81009697]
+script = ExtResource("1_cvnsp")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1990527027]
+scale = Vector2(6.4054265, 6.4054265)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1048277706]
+scale = Vector2(0.6494176, 0.6494176)
+shape = SubResource("CircleShape2D_cvnsp")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1498914258]
+scale = Vector2(0.053234592, 0.053234592)
+texture = ExtResource("2_6t5aa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1960190820]
+scale = Vector2(0.6494176, 0.6494176)
+shape = SubResource("CircleShape2D_7yddl")
+
+[node name="JumpBufferTimer" type="Timer" parent="." unique_id=1425324343]
+one_shot = true

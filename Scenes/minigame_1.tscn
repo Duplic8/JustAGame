@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://cyq6yvghfqttd"]
+
+[ext_resource type="Script" uid="uid://ci0dt3bchoclm" path="res://Scenes/minigame_1.gd" id="1_5txvl"]
+[ext_resource type="Texture2D" uid="uid://bdmr24met4mv8" path="res://peak_background.png" id="1_11mgy"]
+[ext_resource type="PackedScene" uid="uid://b3pjfi2vapobd" path="res://Scenes/player.tscn" id="2_f6tb2"]
+[ext_resource type="Texture2D" uid="uid://o8q8j6kshlag" path="res://coin.png" id="3_f6tb2"]
+[ext_resource type="Script" uid="uid://w56g33ae6rab" path="res://Scenes/coin.gd" id="4_0uv5o"]
+[ext_resource type="PackedScene" uid="uid://jt8xvld1fdvi" path="res://Scenes/timer.tscn" id="6_0uv5o"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3nch"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7yddl"]
+size = Vector2(20, 618)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f6tb2"]
+atlas = ExtResource("3_f6tb2")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6yob"]
+atlas = ExtResource("3_f6tb2")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5txvl"]
+atlas = ExtResource("3_f6tb2")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0uv5o"]
+atlas = ExtResource("3_f6tb2")
+region = Rect2(0, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojqsy"]
+atlas = ExtResource("3_f6tb2")
+region = Rect2(16, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jmcek"]
+atlas = ExtResource("3_f6tb2")
+region = Rect2(32, 16, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ne1wf"]
+atlas = ExtResource("3_f6tb2")
+region = Rect2(0, 32, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vj06g"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f6tb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6yob")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5txvl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0uv5o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ojqsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jmcek")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ne1wf")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qsc71"]
+
+[node name="minigame_1" type="Node2D" unique_id=1709193228]
+script = ExtResource("1_5txvl")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=1124475404]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=643497865]
+offset_right = 1153.5442
+offset_bottom = 648.0
+texture = ExtResource("1_11mgy")
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=969483082]
+position = Vector2(-32, 592)
+scale = Vector2(32.298992, 3.2912076)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=2013579947]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.13333334, 0.11764706, 0.13333334, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1731487963]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_k3nch")
+
+[node name="Platform2" type="StaticBody2D" parent="." unique_id=1721027271]
+position = Vector2(160, 528)
+scale = Vector2(11.150062, 1.0735953)
+
+[node name="ColorRect" type="ColorRect" parent="Platform2" unique_id=288343027]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.24407208, 0.13457957, 0.36684722, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform2" unique_id=1348569315]
+position = Vector2(20.000002, 20)
+shape = SubResource("RectangleShape2D_k3nch")
+
+[node name="Platform3" type="StaticBody2D" parent="." unique_id=494858460]
+position = Vector2(656, 384.00003)
+scale = Vector2(11.150062, 1.0735953)
+
+[node name="ColorRect" type="ColorRect" parent="Platform3" unique_id=130284034]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.24407208, 0.13457957, 0.36684722, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3" unique_id=1009684679]
+position = Vector2(20.000002, 20)
+shape = SubResource("RectangleShape2D_k3nch")
+
+[node name="Platform4" type="StaticBody2D" parent="." unique_id=680045200]
+position = Vector2(24, 299)
+scale = Vector2(11.150062, 1.0735953)
+
+[node name="ColorRect" type="ColorRect" parent="Platform4" unique_id=1083577141]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.24407208, 0.13457957, 0.36684722, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform4" unique_id=735949050]
+position = Vector2(20.000002, 20)
+shape = SubResource("RectangleShape2D_k3nch")
+
+[node name="Player" parent="." unique_id=81009697 instance=ExtResource("2_f6tb2")]
+position = Vector2(64, 536)
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=499938009]
+position = Vector2(1080, 280)
+scale = Vector2(4.790707, 0.790388)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=219013150]
+position = Vector2(-227.10635, 24.038818)
+scale = Vector2(0.20873745, 1.2652014)
+shape = SubResource("RectangleShape2D_7yddl")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=737702098]
+position = Vector2(16.69899, 30.364838)
+scale = Vector2(0.20873745, 1.2652014)
+shape = SubResource("RectangleShape2D_7yddl")
+
+[node name="Coin" type="Node2D" parent="." unique_id=1756513758]
+position = Vector2(120, 24)
+
+[node name="Coin" type="AnimatedSprite2D" parent="Coin" unique_id=110248782]
+position = Vector2(640, 496)
+scale = Vector2(5.614118, 5.614118)
+sprite_frames = SubResource("SpriteFrames_vj06g")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Coin" unique_id=1007651874]
+position = Vector2(639.99994, 496)
+scale = Vector2(3.6001573, 3.6001573)
+script = ExtResource("4_0uv5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin/Area2D" unique_id=1013232738]
+shape = SubResource("CircleShape2D_qsc71")
+
+[node name="Coin2" type="Node2D" parent="." unique_id=1311712505]
+position = Vector2(248, -176)
+
+[node name="Coin" type="AnimatedSprite2D" parent="Coin2" unique_id=223751009]
+position = Vector2(640, 496)
+scale = Vector2(5.614118, 5.614118)
+sprite_frames = SubResource("SpriteFrames_vj06g")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Coin2" unique_id=524525747]
+position = Vector2(639.99994, 496)
+scale = Vector2(3.6001573, 3.6001573)
+script = ExtResource("4_0uv5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin2/Area2D" unique_id=662946287]
+shape = SubResource("CircleShape2D_qsc71")
+
+[node name="Coin3" type="Node2D" parent="." unique_id=1055137943]
+position = Vector2(-544, -256)
+
+[node name="Coin" type="AnimatedSprite2D" parent="Coin3" unique_id=552558542]
+position = Vector2(640, 496)
+scale = Vector2(5.614118, 5.614118)
+sprite_frames = SubResource("SpriteFrames_vj06g")
+autoplay = "default"
+
+[node name="Area2D" type="Area2D" parent="Coin3" unique_id=2121206334]
+position = Vector2(639.99994, 496)
+scale = Vector2(3.6001573, 3.6001573)
+script = ExtResource("4_0uv5o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Coin3/Area2D" unique_id=42851824]
+shape = SubResource("CircleShape2D_qsc71")
+
+[node name="ThemedTimer" parent="." unique_id=1677706825 instance=ExtResource("6_0uv5o")]
+position = Vector2(1096, 32)

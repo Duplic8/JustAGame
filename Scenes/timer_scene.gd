@@ -12,19 +12,19 @@ extends Node2D
 var time
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await Timer(5.0)
+	await Timer(2.0)
 	
 	if Global.minigames_done < 3:
 		Global.minigames_done = Global.minigames_done + 1
 		#Changes your scene to the next minigame
-		get_tree().change_scene_to_file("res://scenes/minigame_" + str(Global.minigames_done) + ".tscn")
+		get_tree().change_scene_to_file("res://Scenes/minigame_" + str(Global.minigames_done) + ".tscn")
 	else:
 		#Back to title screen when game ends
-		get_tree().change_scene_to_file("res://scenes/title_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/title_screen.tscn")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	match Global.lives:
 		4:
 			heart.hide()
@@ -43,7 +43,7 @@ func _process(delta: float) -> void:
 		0:
 			heart_container.hide()
 	timer.text = str(time)
-	level.text = "Level" + str(Global.minigames_done)
+	level.text = "Level " + str(Global.minigames_done + 1)
 
 
 func Timer(start_time: float):

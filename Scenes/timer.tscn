@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://jt8xvld1fdvi"]
+
+[ext_resource type="Script" uid="uid://koo7jk6uiwqv" path="res://themed_timer.gd" id="1_pvhx5"]
+
+[node name="ThemedTimer" type="Node2D" unique_id=1677706825]
+script = ExtResource("1_pvhx5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=1014610163]
+offset_left = -191.0
+offset_top = -47.0
+offset_right = 193.0
+offset_bottom = 41.0
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/normal_font_size = 50
+text = "0.0"
+horizontal_alignment = 1
+vertical_alignment = 1
