@@ -6,4 +6,4 @@ func _ready():
 func _on_body_entered(body):
 	if body.name == "Player":
 		get_tree().current_scene.coin_collect()
-		get_parent().queue_free()
+		get_parent().call_deferred("queue_free")

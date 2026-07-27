@@ -13,7 +13,7 @@ func _process(_delta: float) -> void:
 	if timer_end:
 		Global.minigames_done -= 1
 		Global.lives -= 1
-		get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+		get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_scene.tscn")
 
 func coin_collect() -> void:
 	coin_collected += 1
@@ -21,6 +21,6 @@ func coin_collect() -> void:
 
 	if coin_collected == 3:
 		if Global.minigames_done > 3:
-			get_tree().change_scene_to_file("res://Scenes/done_screen.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Scenes/done_screen.tscn")
 		else:
-			get_tree().change_scene_to_file("res://Scenes/level_scene.tscn")
+			get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_scene.tscn")
