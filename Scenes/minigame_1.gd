@@ -6,7 +6,7 @@ var coin_collected = 0
 var timer_end = false
 
 func _ready() -> void:
-	await themed_timer.Timer(7.0)
+	await themed_timer.Timer(7.5)
 	timer_end = true
 
 func _process(_delta: float) -> void:
