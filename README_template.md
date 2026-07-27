@@ -4,7 +4,7 @@ A simple WarioWare style minigame that incorporates two levels
 
 <!-- Example: "A REST API for fitness enthusiasts to track workouts, body metrics, and personal records." -->
 
-![Screenshot or GIF of the project in action]("robosaur highqual.png")
+![Screenshot or GIF of the project in action](<robosaur highqual.png>)
 
 <!--
   Web/app/mobile → clean screenshot or GIF of the main flow
