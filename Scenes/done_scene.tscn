@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://blun8slpla4nu"]
+
+[ext_resource type="Texture2D" uid="uid://bdmr24met4mv8" path="res://peak_background.png" id="1_yj15t"]
+[ext_resource type="Texture2D" uid="uid://d3stsourduvj3" path="res://ribbon.png" id="2_3u2hx"]
+[ext_resource type="Texture2D" uid="uid://c375qur3xgwqb" path="res://crown.png" id="3_7ajtn"]
+[ext_resource type="Script" uid="uid://cqnlp4s5cxwa3" path="res://return.gd" id="4_tj7vu"]
+
+[node name="done_scene" type="Node2D" unique_id=1286325512]
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=16769554]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=1838359686]
+offset_right = 1153.5442
+offset_bottom = 648.0
+texture = ExtResource("1_yj15t")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=916824206]
+offset_left = 256.0
+offset_right = 6256.0
+offset_bottom = 6000.0
+scale = Vector2(0.10686016, 0.10686016)
+texture = ExtResource("2_3u2hx")
+
+[node name="YOU DID IT!!" type="RichTextLabel" parent="." unique_id=1466084560]
+offset_left = 320.0
+offset_top = 240.0
+offset_right = 832.0
+offset_bottom = 368.0
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/normal_font_size = 50
+text = "VICTORY"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1492429566]
+offset_left = 408.00003
+offset_top = -15.999998
+offset_right = 920.0
+offset_bottom = 496.0
+scale = Vector2(0.6440776, 0.6440776)
+texture = ExtResource("3_7ajtn")
+
+[node name="Return" type="Button" parent="." unique_id=922209985]
+offset_left = 352.0
+offset_top = 416.0
+offset_right = 992.0
+offset_bottom = 512.0
+scale = Vector2(0.699261, 0.699261)
+theme_override_font_sizes/font_size = 60
+text = "Play Again"
+script = ExtResource("4_tj7vu")
+
+[connection signal="pressed" from="Return" to="Return" method="_on_pressed"]

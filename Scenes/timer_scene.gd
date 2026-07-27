@@ -12,7 +12,7 @@ extends Node2D
 var time
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await Timer(2.0)
+	await Timer(1.5)
 	
 	if Global.minigames_done < 3:
 		Global.minigames_done = Global.minigames_done + 1

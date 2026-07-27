@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://csyt7ph6nijx4"]
+
+[ext_resource type="Script" uid="uid://cqnlp4s5cxwa3" path="res://return.gd" id="1_o4s16"]
+[ext_resource type="Texture2D" uid="uid://cfpk1yjhejxq7" path="res://tombstone.png" id="2_8x77k"]
+
+[sub_resource type="Gradient" id="Gradient_wedth"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_l14ni"]
+gradient = SubResource("Gradient_wedth")
+fill_from = Vector2(1, 1)
+fill_to = Vector2(1, 1)
+
+[node name="lost_scene" type="Node2D" unique_id=1310110638]
+
+[node name="Background" type="TextureRect" parent="." unique_id=506359104]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = SubResource("GradientTexture2D_l14ni")
+
+[node name="YOU DID IT!!" type="RichTextLabel" parent="." unique_id=1673964968]
+offset_left = 320.0
+offset_top = 288.0
+offset_right = 832.0
+offset_bottom = 416.0
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/normal_font_size = 50
+text = "Nice Try!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Return" type="Button" parent="." unique_id=2040493020]
+offset_left = 352.0
+offset_top = 416.0
+offset_right = 992.0
+offset_bottom = 512.0
+scale = Vector2(0.699261, 0.699261)
+theme_override_font_sizes/font_size = 60
+text = "Play Again"
+script = ExtResource("1_o4s16")
+
+[node name="Tombstone" type="Sprite2D" parent="." unique_id=291723777]
+position = Vector2(560, 184)
+scale = Vector2(0.5266656, 0.5266656)
+texture = ExtResource("2_8x77k")
+
+[connection signal="pressed" from="Return" to="Return" method="_on_pressed"]
