@@ -8,11 +8,12 @@ extends Node2D
 @onready var heart_5: TextureRect = $HeartContainer/Heart5
 @onready var level: RichTextLabel = $Level
 @onready var timer: RichTextLabel = $Timer
+@onready var levelname: RichTextLabel = $levelname
 
 var time
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	await Timer(1.5)
+	await Timer(3.0)
 	
 	if Global.minigames_done < 3:
 		Global.minigames_done = Global.minigames_done + 1
@@ -44,6 +45,12 @@ func _process(_delta: float) -> void:
 			heart_container.hide()
 	timer.text = str(time)
 	level.text = "Level " + str(Global.minigames_done + 1)
+	if Global.minigames_done == 0:
+		levelname.text = " Platform game!"
+	elif Global.minigames_done == 1:
+		levelname.text = "Clicker game!"
+	elif Global.minigames_done == 2:
+		levelname.text = "Pong!"
 
 
 func Timer(start_time: float):

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dfvo55djr668l"]
+
+[ext_resource type="Script" uid="uid://dgbkokumkmbxd" path="res://Scenes/pong.gd" id="1_e0klk"]
+[ext_resource type="Texture2D" uid="uid://buphnl88dd388" path="res://ball.png" id="1_iko0n"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iko0n"]
+
+[node name="pong" type="CharacterBody2D" unique_id=2076952984]
+scale = Vector2(0.5109859, 0.5109859)
+script = ExtResource("1_e0klk")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=552240945]
+scale = Vector2(0.0720095, 0.0720095)
+texture = ExtResource("1_iko0n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=562695087]
+scale = Vector2(3.3773255, 3.3773255)
+shape = SubResource("RectangleShape2D_iko0n")

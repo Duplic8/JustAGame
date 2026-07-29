@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://cp4s5v13b1hf1"]
+
+[ext_resource type="Texture2D" uid="uid://bdmr24met4mv8" path="res://peak_background.png" id="1_h40nw"]
+[ext_resource type="Script" uid="uid://d2ujqlsa3m7ni" path="res://Scenes/minigame_3.gd" id="1_ihkhm"]
+[ext_resource type="PackedScene" uid="uid://dy0tmdw3kfrli" path="res://Scenes/player_pong.tscn" id="2_ihkhm"]
+[ext_resource type="PackedScene" uid="uid://dfvo55djr668l" path="res://Scenes/pong.tscn" id="4_we0jk"]
+[ext_resource type="PackedScene" uid="uid://jt8xvld1fdvi" path="res://Scenes/timer.tscn" id="5_6sdpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6sdpr"]
+size = Vector2(20, 673)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lr4ld"]
+size = Vector2(40, 40)
+
+[node name="minigame_3" type="Node2D" unique_id=1003569093]
+script = ExtResource("1_ihkhm")
+
+[node name="Background" type="TextureRect" parent="." unique_id=456065758]
+offset_right = 1153.5442
+offset_bottom = 648.0
+texture = ExtResource("1_h40nw")
+
+[node name="backwall" type="Area2D" parent="." unique_id=467400849]
+position = Vector2(-32, 648.00006)
+scale = Vector2(32.298992, 3.2912076)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="backwall" unique_id=514740870]
+position = Vector2(0.7430572, -99.963326)
+scale = Vector2(0.030960716, 0.30383983)
+shape = SubResource("RectangleShape2D_6sdpr")
+
+[node name="Walls" type="StaticBody2D" parent="." unique_id=1666679909]
+position = Vector2(1080, 280)
+scale = Vector2(4.790707, 0.790388)
+
+[node name="floor" type="CollisionShape2D" parent="Walls" unique_id=264785072]
+position = Vector2(-97.27586, 548.875)
+scale = Vector2(6.742008, 4.16404)
+shape = SubResource("RectangleShape2D_lr4ld")
+
+[node name="ceiling" type="CollisionShape2D" parent="Walls" unique_id=1254198080]
+position = Vector2(-100.615654, -432.92133)
+scale = Vector2(6.742009, 4.1640406)
+shape = SubResource("RectangleShape2D_lr4ld")
+
+[node name="wall" type="CollisionShape2D" parent="Walls" unique_id=2061681102]
+position = Vector2(16.69899, 39.85385)
+scale = Vector2(0.20873745, 1.2652014)
+shape = SubResource("RectangleShape2D_6sdpr")
+
+[node name="player_pong" parent="." unique_id=457132857 instance=ExtResource("2_ihkhm")]
+position = Vector2(56, 320)
+
+[node name="pong" parent="." unique_id=2076952984 instance=ExtResource("4_we0jk")]
+position = Vector2(504, 352)
+
+[node name="ThemedTimer" parent="." unique_id=1677706825 instance=ExtResource("5_6sdpr")]
+position = Vector2(1096, 32)

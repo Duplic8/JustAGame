@@ -52,11 +52,22 @@ text = "Level #"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="levelname" type="RichTextLabel" parent="." unique_id=268029458]
+offset_left = 384.0
+offset_top = 320.0
+offset_right = 768.0
+offset_bottom = 408.0
+theme_override_constants/outline_size = 22
+theme_override_font_sizes/normal_font_size = 50
+text = "level name"
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="Timer" type="RichTextLabel" parent="." unique_id=435131844]
 offset_left = 384.0
-offset_top = 328.0
+offset_top = 408.0
 offset_right = 768.0
-offset_bottom = 416.0
+offset_bottom = 496.0
 theme_override_constants/outline_size = 22
 theme_override_font_sizes/normal_font_size = 50
 text = "0.0"

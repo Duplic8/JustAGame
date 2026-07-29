@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dy0tmdw3kfrli"]
+
+[ext_resource type="Script" uid="uid://pj67triioxqb" path="res://Scenes/player_pong.gd" id="1_j0dia"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3nch"]
+
+[node name="player_pong" type="CharacterBody2D" unique_id=457132857]
+scale = Vector2(0.77656066, 6.4566364)
+script = ExtResource("1_j0dia")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1901544104]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1669059785]
+shape = SubResource("RectangleShape2D_k3nch")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=294752852]
+shape = SubResource("RectangleShape2D_k3nch")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1657203519]
+offset_left = -10.301835
+offset_top = -9.912282
+offset_right = 29.698166
+offset_bottom = 30.087719
+scale = Vector2(0.51609075, 0.5000551)
+color = Color(0, 0, 0, 1)
