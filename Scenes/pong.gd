@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var START_SPEED = 450.0
-@export var ACCELERATION = 50.0
+@export var ACCELERATION = 40.0
 
 func _ready():
 	reset_ball()
@@ -16,7 +16,7 @@ func _physics_process(delta):
 func reset_ball():
 	global_position = Vector2(576, 324) 
 	
-	# Forces direction to the right (towards your 'wall' node inside 'Walls')
+	# Forces direction to the right
 	var x_dir = 1.0 
 	var y_dir = randf_range(-0.5, 0.5)
 	
