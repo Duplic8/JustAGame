@@ -22,9 +22,10 @@ Open the game on itch.io! (https://duplic8.itch.io/dinogame)
 
 ## Features
 
-- [Includes two different microgames]
+- [Includes three different microgames]
 - [A platformer game]
 - [A clicker game]
+- [A pong game]
 - [Victory and Death Screens]
 - [5 Live system]
 
