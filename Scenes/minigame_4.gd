@@ -15,7 +15,7 @@ func _ready():
 	randomize()
 	
 
-	# Hide the original obstacle because it is only a template
+	# Hide the original obstacle template
 	obstacle_node.hide()
 	obstacle_node.set_process(false)
 
@@ -36,7 +36,7 @@ func spawn_obstacle():
 
 	var new_obstacle = obstacle_node.duplicate()
 
-	# Spawn location
+
 	new_obstacle.position = Vector2(1255, 568)
 
 	new_obstacle.show()
