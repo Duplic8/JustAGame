@@ -26,6 +26,7 @@ Open the game on itch.io! (https://duplic8.itch.io/dinogame)
 - [A platformer game]
 - [A clicker game]
 - [A pong game]
+- [A Geometry Dash style game]
 - [Victory and Death Screens]
 - [5 Live system]
 
