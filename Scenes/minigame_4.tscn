@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://dgc68tlj7kk4c"]
+
+[ext_resource type="Texture2D" uid="uid://bdmr24met4mv8" path="res://peak_background.png" id="1_wcvdo"]
+[ext_resource type="Script" uid="uid://thcp2v0kru00" path="res://Scenes/minigame_4.gd" id="1_xea2i"]
+[ext_resource type="PackedScene" uid="uid://b3pjfi2vapobd" path="res://Scenes/player.tscn" id="2_lrixb"]
+[ext_resource type="PackedScene" uid="uid://wl5kegx1nkol" path="res://Scenes/obstacle.tscn" id="3_xea2i"]
+[ext_resource type="PackedScene" uid="uid://jt8xvld1fdvi" path="res://Scenes/timer.tscn" id="5_ake4f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ake4f"]
+size = Vector2(40, 40)
+
+[node name="minigame_4" type="Node2D" unique_id=382551182]
+script = ExtResource("1_xea2i")
+
+[node name="ScrollingBackground" type="Parallax2D" parent="." unique_id=175879518]
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(100, 0)
+
+[node name="Background" type="TextureRect" parent="ScrollingBackground" unique_id=1386318891]
+offset_right = 1153.5442
+offset_bottom = 648.0
+texture = ExtResource("1_wcvdo")
+metadata/_edit_use_anchors_ = true
+
+[node name="Platform1" type="StaticBody2D" parent="." unique_id=378449873]
+position = Vector2(-32, 592)
+scale = Vector2(32.298992, 3.2912076)
+
+[node name="ColorRect" type="ColorRect" parent="Platform1" unique_id=942511844]
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.13333334, 0.11764706, 0.13333334, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform1" unique_id=1588312405]
+position = Vector2(20, 20)
+shape = SubResource("RectangleShape2D_ake4f")
+
+[node name="obstacle" parent="." unique_id=1096400572 instance=ExtResource("3_xea2i")]
+position = Vector2(1255.0001, 568)
+
+[node name="ThemedTimer" parent="." unique_id=1677706825 instance=ExtResource("5_ake4f")]
+position = Vector2(1104, 32)
+
+[node name="Player" parent="." unique_id=81009697 instance=ExtResource("2_lrixb")]
+position = Vector2(192, 536)
+scale = Vector2(1.2365439, 1.2365439)
+
+[node name="SpawnTimer" type="Timer" parent="." unique_id=1674307682]

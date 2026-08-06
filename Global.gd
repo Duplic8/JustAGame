@@ -2,7 +2,7 @@ extends Node
 
 var minigames_done = 0 #tracks the number of minigames finished
 var lives = 5 #tracks the number of lives left
-
+var total_minigames = 4
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

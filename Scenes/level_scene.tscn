@@ -53,9 +53,9 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="levelname" type="RichTextLabel" parent="." unique_id=268029458]
-offset_left = 384.0
+offset_left = 256.0
 offset_top = 320.0
-offset_right = 768.0
+offset_right = 896.0
 offset_bottom = 408.0
 theme_override_constants/outline_size = 22
 theme_override_font_sizes/normal_font_size = 50

@@ -37,10 +37,15 @@ func _on_backwall_body_entered(body):
 			get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_scene.tscn")
 
 func _on_timer_timeout():
+	#win condition
 	if not game_over:
 		game_over = true
 		_end_game()
-		get_tree().call_deferred("change_scene_to_file", "res://Scenes/done_scene.tscn")
+		
+		if Global.minigames_done >= Global.total_minigames:
+			get_tree().call_deferred("change_scene_to_file", "res://Scenes/done_scene.tscn")
+		else:
+			get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_scene.tscn")
 
 func _end_game():
 	ball_node.set_physics_process(false)

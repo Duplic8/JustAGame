@@ -23,7 +23,8 @@ func coin_collect() -> void:
 	print("Coins collected:", coin_collected)
 
 	if coin_collected == 3:
-		if Global.minigames_done >= 2:
+		#win condition
+		if Global.minigames_done >= Global.total_minigames:
 			get_tree().call_deferred("change_scene_to_file", "res://Scenes/done_scene.tscn")
 		else:
 			get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_scene.tscn")

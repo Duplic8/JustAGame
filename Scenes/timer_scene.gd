@@ -15,7 +15,7 @@ var time
 func _ready() -> void:
 	await Timer(3.0)
 	
-	if Global.minigames_done < 3:
+	if Global.minigames_done < 4:
 		Global.minigames_done = Global.minigames_done + 1
 		#Changes your scene to the next minigame
 		get_tree().change_scene_to_file("res://Scenes/minigame_" + str(Global.minigames_done) + ".tscn")
@@ -51,6 +51,8 @@ func _process(_delta: float) -> void:
 		levelname.text = "Clicker game!"
 	elif Global.minigames_done == 2:
 		levelname.text = "Pong!"
+	elif Global.minigames_done == 3:
+		levelname.text = "Jump over the cars!"
 
 
 func Timer(start_time: float):

@@ -10,8 +10,12 @@ func _ready() -> void:
 
 
 func _process(delta: float) -> void:
+	#win condition
 	if buttons_pressed == 8:
-		get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_scene.tscn")
+		if Global.minigames_done >= Global.total_minigames:
+			get_tree().call_deferred("change_scene_to_file", "res://Scenes/done_scene.tscn")
+		else:
+			get_tree().call_deferred("change_scene_to_file", "res://Scenes/level_scene.tscn")
 	
 	if timer_end:
 		Global.lives -= 1

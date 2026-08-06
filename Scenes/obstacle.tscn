@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://wl5kegx1nkol"]
+
+[ext_resource type="Script" uid="uid://dj6b4kn7pqo1n" path="res://Scenes/obstacle.gd" id="1_2p81s"]
+[ext_resource type="Texture2D" uid="uid://dgqlhkgsamp85" path="res://sedan_blue.png" id="1_15o2q"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3nch"]
+size = Vector2(26.846483, 13.369297)
+
+[node name="obstacle" type="Area2D" unique_id=819912637]
+scale = Vector2(2.9799063, 2.9799063)
+script = ExtResource("1_2p81s")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1864081637]
+position = Vector2(-1.1920929e-07, 0)
+scale = Vector2(1.0862069, 1.1923077)
+texture = ExtResource("1_15o2q")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1639365670]
+position = Vector2(1.1201224e-06, 1.3153514)
+scale = Vector2(0.9999999, 0.9999999)
+shape = SubResource("RectangleShape2D_k3nch")

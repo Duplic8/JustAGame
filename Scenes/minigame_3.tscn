@@ -52,7 +52,7 @@ shape = SubResource("RectangleShape2D_6sdpr")
 position = Vector2(56, 320)
 
 [node name="pong" parent="." unique_id=2076952984 instance=ExtResource("4_we0jk")]
-position = Vector2(504, 352)
+position = Vector2(512, 320)
 
 [node name="ThemedTimer" parent="." unique_id=1677706825 instance=ExtResource("5_6sdpr")]
 position = Vector2(1096, 32)
